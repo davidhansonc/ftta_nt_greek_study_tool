@@ -33,26 +33,38 @@
   </header>
 
 
-
-<!-- Add your site or app content here -->
- 
  <div class="container">
     <div class="row">
       <div class="col-xs-12">
 
         <div class="card">
           <div class="card-block">
-            <h2>New Testament</h2>
-              <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                  Book
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><a class="dropdown-item" href="#">Matthew</a></li>
-                  <li><a class="dropdown-item" href="#">Mark</a></li>
-                  <li><a class="dropdown-item" href="#">Luke</a></li>
-                </ul>
-              </div>
+            <form class="form-group">
+              <label for="filter-bible">Bible</label>
+              <select class="filter-bible" id="filter-bible">
+                  <option>Nestle 1904</option>
+                  <option>RcV</option>
+              </select>
+            <form class="form-group">
+              <label for="filter-book">Book</label>
+              <select class="filter-book" id="filter-book" name=books method="GET" action="/">
+                  {% for book in books %}
+                  <option value="{{ book }}" SELECTED>{{ book }}</option>"
+                  {% endfor %}
+              </select>
+            <form class="form-group">
+              <label for="filter-chapter">Chapter</label>
+              <select class="filter-chapter" id="filter-chapter">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+              </select>
+            </form>
+          </div>
+          <div class="card-block">
+            <h2>{{ book }}</h2>
               <p>
                 This will be actual New Testament text.
               </p>
@@ -68,9 +80,6 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <p><img src="../static/assets/images/mashup-icon.svg" alt=""></p>
-        
-        <p>©All right reserved. Design <a href="http://www.mashup-template.com/" title="Create website with free html template">Mashup Template</a>/<a href="https://unsplash.com/" title="Beautiful Free Images">Unsplash</a></p>
       </div>
     </div>
   </div>

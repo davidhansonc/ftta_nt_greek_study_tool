@@ -15,7 +15,6 @@ def scrape_verses(link):
     for verse in verses:
         with open('rcv.txt', 'a') as rcv:
             rcv.write(verse.text + '\n')
-    return
 
 
 def get_child_links(url, driver, selector):
