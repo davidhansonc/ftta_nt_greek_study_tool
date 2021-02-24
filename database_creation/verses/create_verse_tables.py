@@ -1,11 +1,10 @@
 import re
 import psycopg2
-import pdb
 from bible_book_regex import nt_regex
 
 
 def verses_to_db(db_connection, db_cursor, path_to_file, regex_dict, bible_version):
-    with open(path_to_file, 'r') as text:
+    with open(path_to_file, "r") as text:
         # pdb.set_trace()
         for line in text:
             line = line.strip()
@@ -41,26 +40,29 @@ def db_verse_insert(db_cursor, regex_dict, verse_data, bible_version):
 
 
 def create_table(db_connection, db_cursor):
-    db_cursor.execute(open('./create_nt_table.sql', 'r').read())
+    db_cursor.execute(open("./create_nt_table.sql", "r").read())
 
 
-if __name__ == '__main__':
-    rcv_txt = 'rcv.txt'
-    gk_txt = './nestle1904/nestle1904.txt'
+if __name__ == "__main__":
+    rcv_txt = "rcv.txt"
+    gk_txt = "./nestle1904/nestle1904.txt"
 
     try:
         conn = psycopg2.connect(
-            host='localhost',
-            database='na28_rcv',
-            user='davidhansonc',
-            password=''
+            host="localhost",
+            database="na28_rcv",
+            user="davidhansonc",
+            password=""
         )
         conn.set_session(autocommit=True)
         cursor = conn.cursor()
 
         create_table(conn, cursor)
-        verses_to_db(conn, cursor, rcv_txt, nt_regex, 'recovery_version')
-        verses_to_db(conn, cursor, gk_txt, nt_regex, 'nestle1904')
+        print("verse table created")
+        verses_to_db(conn, cursor, rcv_txt, nt_regex, "recovery_version")
+        print("Recovery Version verses filled")
+        verses_to_db(conn, cursor, gk_txt, nt_regex, "nestle1904")
+        print("Nestle Aland verses filled")
 
     except (Exception, psycopg2.Error) as error:
         print("Error while fetching data from PostgreSQL: ", error)
