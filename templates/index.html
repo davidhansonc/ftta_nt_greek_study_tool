@@ -28,7 +28,7 @@
   <header class="white-text-container section-container">
     <div class="text-center">
       <h1>FTTGreek</h1>
-      <p>An FTTA Greek New Testament Study Tool</p>
+      <p>A New Testament Study Tool for FTT Students</p>
     </div>
   </header>
 
@@ -41,9 +41,10 @@
           <div class="card-block">
             <form class="form-group">
               <label for="filter-bible">Bible</label>
-              <select class="filter-bible" id="filter-bible">
-                  <option>Nestle 1904</option>
-                  <option>RcV</option>
+              <select class="filter-book" id="filter-book" name=translation method="GET" action="/">
+                  {% for translation in translations %}
+                  <option value="{{ translation }}" SELECTED>{{ translation }}</option>"
+                  {% endfor %}
               </select>
             <form class="form-group">
               <label for="filter-book">Book</label>
