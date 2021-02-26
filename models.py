@@ -1,18 +1,30 @@
 from flask_sqlalchemy import SQLAlchemy
- 
+from sqlalchemy import PrimaryKeyConstraint
+
+
 db = SQLAlchemy()
- 
-class model_name(db.Model):
-    __tablename__ = 'new_testament'
- 
-    field1_name = db.Column(db.Field1Type, primary_key...)
-    field2_name = db.Column(db.Field2Type)
-    field3_name = db.Column(db.Field3Type)
- 
-    def __init__(self, Field1_name,Field1_name,Field1_name):
-        self.field1_name = field1_name
-        self.field2_name = field2_name
-        self.field3_name = field3_name
- 
+
+class NTVerses(db.Model):
+    __tablename__ = "new_testament"
+
+    book = db.Column(db.String(), nullable=False)
+    chapter = db.Column(db.Integer(), nullable=False)
+    verse = db.Column(db.Integer(), nullable=False)
+    recovery_version = db.Column(db.String())
+    nestle1904 = db.Column(db.String())
+    amplified = db.Column(db.String())
+    __table_args__ = (
+            db.PrimaryKeyConstraint(book, chapter, verse),
+        )
+
+
+    def __init__(self, name, model, doors):
+        self.book = book
+        self.chapter = chapter
+        self.verse = verse
+        self.recovery_version = recovery_version
+        self.amplified = amplified
+    
+
     def __repr__(self):
-        return f"<statement>"
+        return f'<Post {self.book}>'

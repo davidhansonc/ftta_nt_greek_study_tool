@@ -11,7 +11,3 @@ CREATE TABLE new_testament (
     amplified text,
     PRIMARY KEY (book, chapter, verse)
 )
-
-    -- outline varchar(250),
-    -- cross_reference INT [],
-    -- footnote TEXT [],

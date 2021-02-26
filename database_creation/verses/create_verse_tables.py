@@ -44,7 +44,7 @@ def create_table(db_connection, db_cursor):
 
 
 if __name__ == "__main__":
-    rcv_txt = "rcv.txt"
+    rcv_txt = "./recovery_version/rcv.txt"
     gk_txt = "./nestle1904/nestle1904.txt"
 
     try:
@@ -57,8 +57,8 @@ if __name__ == "__main__":
         conn.set_session(autocommit=True)
         cursor = conn.cursor()
 
-        create_table(conn, cursor)
-        print("verse table created")
+        # create_table(conn, cursor)
+        # print("verse table created")
         verses_to_db(conn, cursor, rcv_txt, nt_regex, "recovery_version")
         print("Recovery Version verses filled")
         verses_to_db(conn, cursor, gk_txt, nt_regex, "nestle1904")
