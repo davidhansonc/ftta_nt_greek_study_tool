@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="Mashup templates have been developped by Orson.io team" name="author">
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="../static/assets/apple-icon-180x180.png">
+  <link href="../static/assets/favicon.ico" rel="icon">
+
+  <title>David Hanson</title>  
+
+<link href="../static/main.css" rel="stylesheet"></head>
+
+<body class="">
+
+<!-- Add your content of header -->
+<main class="content-wrapper">
+  <header class="white-text-container section-container">
+    <div class="text-center">
+      <h1>FTTGreek</h1>
+      <p>A New Testament Study Tool for FTT Students</p>
+    </div>
+  </header>
+
+
+ <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+
+        <div class="card">
+          <div class="card-block">
+
+            <form class="form-group" method="POST" action="/">
+              <label for="filter-bible">Bible</label>
+              <select class="filter-bible" id="filter-bible" name=translation>
+                  <option value="{{ to_display[0] }}" selected>{{ to_display[0] }}</option>
+                  {% for translation in translations %}
+                    <option value="{{ translation }}">{{ translation }}</option>
+                  {% endfor %}
+              </select><br>
+              <label for="filter-book">Book</label>
+              <select class="filter-book" id="filter-book" name="books">
+                  <option value="{{ to_display[1] }}" selected>{{ to_display[1] }}</option>
+                  {% for book in books %}
+                    <option value="{{ book }}">{{ book }}</option>
+                  {% endfor %}
+              </select><br>
+              <!-- <label for="filter-chapter">Chapter</label>
+              <select class="filter-chapter" id="filter-chapter" name="chapters">
+                  <option value="{{ to_display[2] }}" selected>{{ to_display[2] }}</option>
+                  {% for chapter in chapters %}
+                    <option value="{{ chapter }}">{{ chapter }}</option>
+                  {% endfor %}
+              </select> -->
+              <button type="submit" class="btn btn-default">Go</button>
+            </form>
+            {{ text }}
+
+          </div>
+          <!-- <div class="card-block">
+            <h2>{{ book }}</h2>
+              <p>
+                This will be actual New Testament text.
+              </p>
+          </div> -->
+        </div>
+
+      </div>
+    </div>
+ </div>
+
+</main>
+<footer class="footer-container white-text-container text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+     scrollRevelation('.card');
+  });
+</script>
+<script type="text/javascript" src="../static/main.js"></script></body>
+
+</html>
