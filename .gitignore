@@ -1,3 +1,6 @@
+# Virtual Env
+pyenv
+
 # MacOS
 .DS_Store
 .vscode
