@@ -7,8 +7,8 @@ import create_verse_tables
 
 
 app = Flask(__name__)
-# app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://gchapifzwomimb:5be1227606be09cdc5fc4cb50bcafff0d1d32ea8572c6a2a10912d5481f7e3c5@ec2-50-16-108-41.compute-1.amazonaws.com:5432/d923lfcqpkom3m"
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://davidhansonc:@localhost:5432/na28_rcv"
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://gchapifzwomimb:5be1227606be09cdc5fc4cb50bcafff0d1d32ea8572c6a2a10912d5481f7e3c5@ec2-50-16-108-41.compute-1.amazonaws.com:5432/d923lfcqpkom3m"
+# app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://davidhansonc:@localhost:5432/na28_rcv"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 migrate = Migrate(app, db)
