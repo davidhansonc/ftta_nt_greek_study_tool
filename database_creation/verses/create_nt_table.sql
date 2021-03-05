@@ -1,6 +1,6 @@
-DROP TABLE IF EXISTS new_testament;
+-- DROP TABLE IF EXISTS new_testament;
 
-CREATE TABLE new_testament (
+CREATE TABLE IF NOT EXISTS new_testament (
     verse_id SERIAL NOT NULL,
     book varchar(25) NOT NULL,
     chapter INT NOT NULL,

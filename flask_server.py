@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from models import db, NTVerses, BibleBooks
 from data import book_data
+import create_verse_tables
 
 
 app = Flask(__name__)
@@ -53,5 +54,6 @@ def query_text(query_version="Nestle 1904", query_book="Matthew", query_chapter=
 
 
 if __name__ == "__main__":
+    create_verse_tables.init_database()
     app.run()
     # app.run(debug=True)

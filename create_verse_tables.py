@@ -1,6 +1,6 @@
 import re
 import psycopg2
-from bible_book_regex import nt_regex
+from database_creation.verses.bible_book_regex import nt_regex
 
 
 def verses_to_db(db_connection, db_cursor, path_to_file, regex_dict, bible_version):
@@ -40,12 +40,12 @@ def db_verse_insert(db_cursor, regex_dict, verse_data, bible_version):
 
 
 def create_table(db_connection, db_cursor):
-    db_cursor.execute(open("./create_nt_table.sql", "r").read())
+    db_cursor.execute(open("./database_creation/verses/create_nt_table.sql", "r").read())
 
 
-if __name__ == "__main__":
-    rcv_txt = "./recovery_version/rcv.txt"
-    gk_txt = "./nestle1904/nestle1904.txt"
+def init_database():
+    rcv_txt = "./database_creation/verses/recovery_version/rcv.txt"
+    gk_txt = "./database_creation/verses/nestle1904/nestle1904.txt"
 
     try:
         conn = psycopg2.connect(
@@ -57,8 +57,8 @@ if __name__ == "__main__":
         conn.set_session(autocommit=True)
         cursor = conn.cursor()
 
-        # create_table(conn, cursor)
-        # print("verse table created")
+        create_table(conn, cursor)
+        print("verse table created")
         verses_to_db(conn, cursor, rcv_txt, nt_regex, "recovery_version")
         print("Recovery Version verses filled")
         verses_to_db(conn, cursor, gk_txt, nt_regex, "nestle1904")
@@ -72,3 +72,7 @@ if __name__ == "__main__":
             cursor.close()
             conn.close()
             print("PostgreSQL connection is closed")
+
+
+if __name__ == "__main__":
+    init_database()
