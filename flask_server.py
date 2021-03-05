@@ -1,34 +1,33 @@
 from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
-# from flask_migrate import Migrate
 from models import db, NTVerses, BibleBooks
-# import create_verse_tables
 from pandas import read_csv
+from create_verse_tables import assemble_df
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://gchapifzwomimb:5be1227606be09cdc5fc4cb50bcafff0d1d32ea8572c6a2a10912d5481f7e3c5@ec2-50-16-108-41.compute-1.amazonaws.com:5432/d923lfcqpkom3m"
-# app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://davidhansonc:@localhost:5432/na28_rcv"
+# app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://gchapifzwomimb:5be1227606be09cdc5fc4cb50bcafff0d1d32ea8572c6a2a10912d5481f7e3c5@ec2-50-16-108-41.compute-1.amazonaws.com:5432/d923lfcqpkom3m"
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://davidhansonc:@localhost:5432/na28_rcv"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 
 
-def get_table_data():
+def insert_table_data():
     s = db.session()
 
     # Fill Bible book data if table is empty
     if len(s.query(BibleBooks).all()) == 0:
         print("No data in the table detected.")
         print("Initializing the table in database.")
-        df = read_csv("data.csv", usecols=range(3),lineterminator="\n")
+        df = read_csv("./database_creation/verses/data.csv", usecols=range(3), lineterminator="\n")
         df.to_sql(name="bible_books", con=db.engine, if_exists="append", index=False)
 
     # Input verses if table is empty
-    # if len(s.query(NTVerses).all()) == 0:
-    #     print("No data in the table detected.")
-    #     print("Initializing the table in database.")
-    #     df = read_csv("data.csv", usecols=range(3),lineterminator="\n")
-    #     df.to_sql(name="bible_books", con=db.engine, if_exists="append", index=False)
+    if len(s.query(NTVerses).all()) == 0:
+        print("No data in the table detected.")
+        print("Initializing the table in database.")
+        df = assemble_df()
+        df.to_sql(name="bible_books", con=db.engine, if_exists="append", index=False)
 
 
 @app.route("/")
@@ -85,6 +84,6 @@ def query_text(query_version="Nestle 1904", query_book="Matthew", query_chapter=
 if __name__ == "__main__":
     with app.app_context():
         db.create_all()
-        get_table_data()
+        insert_table_data()
     # app.run()
     app.run(debug=True)
