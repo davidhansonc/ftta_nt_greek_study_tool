@@ -1,7 +1,6 @@
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import PrimaryKeyConstraint
 
-
 db = SQLAlchemy()
 
 class NTVerses(db.Model):
@@ -36,8 +35,10 @@ class BibleBooks(db.Model):
     id = db.Column('book_id', db.Integer, primary_key = True)
     book = db.Column(db.String(), nullable=False)
     chapters = db.Column(db.Integer(), nullable=False)
+    subject = db.Column(db.String())
 
 
     def __init__(self, name, model, doors):
         self.book = book
-        self.chapter = chapter
+        self.chapters = chapters
+        self.subject = subject
