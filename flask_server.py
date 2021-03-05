@@ -19,15 +19,16 @@ def insert_table_data():
     if len(s.query(BibleBooks).all()) == 0:
         print("No data in the table detected.")
         print("Initializing the table in database.")
-        df = read_csv("./database_creation/verses/data.csv", usecols=range(3), lineterminator="\n")
+        df = read_csv("./database_creation/verses/nt_book_data.csv", usecols=range(3), lineterminator="\n")
         df.to_sql(name="bible_books", con=db.engine, if_exists="append", index=False)
 
     # Input verses if table is empty
     if len(s.query(NTVerses).all()) == 0:
         print("No data in the table detected.")
         print("Initializing the table in database.")
-        df = assemble_df()
-        df.to_sql(name="bible_books", con=db.engine, if_exists="append", index=False)
+        gk_df = read_csv("./database_creation/verses/nestle1904/nestle1904.csv", usecols=range(4), lineterminator="\n")
+        rcv_df = read_csv("./database_creation/verses/recovery_version/rcv.csv", usecols=range(4), lineterminator="\n")
+        total_df.to_sql(name="bible_books", con=db.engine, if_exists="append", index=False)
 
 
 @app.route("/")

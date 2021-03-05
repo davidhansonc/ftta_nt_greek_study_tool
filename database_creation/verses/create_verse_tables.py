@@ -1,6 +1,6 @@
 import csv
 import re
-from database_creation.verses.bible_book_regex import nt_regex
+from bible_book_regex import nt_regex
 
 
 def txt_to_csv(file_path, new_path):
@@ -9,12 +9,15 @@ def txt_to_csv(file_path, new_path):
     writer = csv.writer(csv_file)
     for line in txt_file:
         line = line.strip()
-        print(line)
         parsed_data = parse_for_csv(nt_regex, line)
         writer.writerow(parsed_data)
 
 
 def parse_for_csv(regex_dict, verse_data):
+    book = None
+    chapter = None
+    verse = None
+    verse_text = None
     for book_name, regex in regex_dict.items():
         if re.match(regex, verse_data):
             match = re.search(regex, verse_data)
@@ -26,11 +29,11 @@ def parse_for_csv(regex_dict, verse_data):
             verse_text = match.group(4).strip().replace("'", "''")
             # verse_for_sql = f"'{verse_text} '"
 
-            return [book, chapter, verse, verse_text]
+    return [book, chapter, verse, verse_text]
 
 
 if __name__ == "__main__":
-    file_path = "./database_creation/verses/recovery_version/rcv.txt"
-    new_path = "./database_creation/verses/recovery_version/rcv.csv"
+    file_path = "./nestle1904/nestle1904.txt"
+    new_path = "./nestle1904/nestle1904.csv"
 
     txt_to_csv(file_path, new_path)
