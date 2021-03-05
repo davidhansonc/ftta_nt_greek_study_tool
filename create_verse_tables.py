@@ -48,11 +48,17 @@ def init_database():
     gk_txt = "./database_creation/verses/nestle1904/nestle1904.txt"
 
     try:
+        host = "ec2-50-16-108-41.compute-1.amazonaws.com"
+        database = "d923lfcqpkom3m"
+        user = "gchapifzwomimb"
+        password = "5be1227606be09cdc5fc4cb50bcafff0d1d32ea8572c6a2a10912d5481f7e3c5"
+        port = 5432
         conn = psycopg2.connect(
-            host="localhost",
-            database="na28_rcv",
-            user="davidhansonc",
-            password=""
+            host=host,
+            database=database,
+            user=user,
+            password=password,
+            port=port
         )
         conn.set_session(autocommit=True)
         cursor = conn.cursor()
