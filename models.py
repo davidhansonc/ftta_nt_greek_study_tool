@@ -21,7 +21,6 @@ class NTVerses(db.Model):
         self.chapter = chapter
         self.verse = verse
         self.recovery_version = recovery_version
-        self.amplified = amplified
     
 
     def __repr__(self):
@@ -39,5 +38,5 @@ class BibleBooks(db.Model):
 
     def __init__(self, name, model, doors):
         self.book = book
-        self.chapters = chapters
+        self.chapter = chapter
         self.subject = subject

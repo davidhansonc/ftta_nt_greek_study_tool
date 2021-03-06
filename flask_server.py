@@ -58,7 +58,9 @@ def display_text():
         books = get_book_list()
 
 
-        return render_template("text.html", selected_version=translation, selected_book=book, subject=subject, text=text, translations=translations)
+        book_subject = "The Gospel of the Kingdom--Proving That Jesus Christ Is the King-Savior"
+
+        return render_template("text.html", to_display=to_display, text=text, translations=translations, books=books, book_subject=book_subject)
     else:
         return home()
 
