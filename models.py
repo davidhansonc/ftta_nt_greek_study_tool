@@ -23,10 +23,6 @@ class NTVerses(db.Model):
         self.recovery_version = recovery_version
     
 
-    def __repr__(self):
-        return f'<Post {self.book}>'
-
-
 class BibleBooks(db.Model):
     __tablename__ = "bible_books"
 

@@ -11,28 +11,6 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 
 
-def insert_table_data():
-    s = db.session()
-
-    # Fill Bible book data if table is empty
-    if len(s.query(BibleBooks).all()) == 0:
-        print("No data in the table detected.")
-        print("Initializing the table in database.")
-        df = read_csv("./database_creation/verses/nt_book_data.csv", usecols=range(3), lineterminator="\n")
-        df.to_sql(name="bible_books", con=db.engine, if_exists="append", index=False)
-
-    # Input verses if table is empty
-    if len(s.query(NTVerses).all()) == 0:
-        print("No data in the table detected.")
-        print("Initializing the table in database.")
-        gk_cols = ["book", "chapter", "verse", "nestle1904"]
-        gk_df = pd.read_csv("./database_creation/verses/nestle1904/nestle1904.csv", names=gk_cols, header=None, usecols=range(4), lineterminator="\n")
-        rcv_cols = ["book", "chapter", "verse", "recovery_version"]
-        rcv_df = pd.read_csv("./database_creation/verses/recovery_version/rcv.csv", names=rcv_cols, header=None, usecols=range(4), lineterminator="\n")
-        total_df = pd.merge(rcv_df, gk_df, how="outer", on=["book", "chapter", "verse"])
-        total_df.to_sql(name="new_testament", con=db.engine, if_exists="append", index=False)
-
-
 @app.route("/")
 def home():
     translations = ["Nestle 1904", "Recovery Version"]
@@ -47,7 +25,6 @@ def display_text():
         translation = request.form["translation"]
         book = request.form["books"]
         subject = get_book_subject(book)
-        # subject = "The Gospel of the Kingdom--Proving That Jesus Christ Is the King-Savior"
         text = None
         try:
             text = query_text(translation, book)
@@ -57,16 +34,14 @@ def display_text():
         translations = ["Nestle 1904", "Recovery Version"]
         books = get_book_list()
 
-
-        book_subject = "The Gospel of the Kingdom--Proving That Jesus Christ Is the King-Savior"
-
-        return render_template("text.html", to_display=to_display, text=text, translations=translations, books=books, book_subject=book_subject)
+        return render_template("text.html", selected_version=translation, selected_book=book, text=text, translations=translations, books=books, book_subject=subject)
     else:
         return home()
 
 
 def get_book_list():
     book_list = BibleBooks.query.with_entities(BibleBooks.book).all()
+    book_list = [book[0] for book in book_list]
     return book_list
 
 
@@ -84,6 +59,36 @@ def query_text(query_version="Nestle 1904", query_book="Matthew", query_chapter=
 
     verses_as_string = ''.join(verses)
     return verses_as_string
+
+
+def insert_table_data():
+    s = db.session()
+
+    # Fill Bible book data if table is empty
+    if len(s.query(BibleBooks).all()) == 0:
+        print("No book data in the table detected.")
+        print("Initializing BibleBooks table in database.")
+
+        df = read_csv("./database_creation/verses/nt_book_data.csv", usecols=range(3), lineterminator="\n")
+        df.to_sql(name="bible_books", con=db.engine, if_exists="append", index=False)
+
+    # Input verses if table is empty
+    if len(s.query(NTVerses).all()) == 0:
+        print("No verse data in the table detected.")
+        print("Initializing NTVerses table in database.")
+        
+        gk_cols = ["book", "chapter", "verse", "nestle1904"]
+        gk_df = pd.read_csv("./database_creation/verses/nestle1904/nestle1904.csv", names=gk_cols, header=None, usecols=range(4), lineterminator="\n")
+
+        rcv_cols = ["book", "chapter", "verse", "recovery_version"]
+        rcv_df = pd.read_csv("./database_creation/verses/recovery_version/rcv.csv", names=rcv_cols, header=None, usecols=range(4), lineterminator="\n")
+
+        total_df = pd.merge(rcv_df, gk_df, how="outer", on=["book", "chapter", "verse"])
+        try:
+            total_df.to_sql(name="new_testament", con=db.engine, if_exists="append", index=False)
+            print("added to db")
+        except:
+            print("not working")
 
 
 if __name__ == "__main__":

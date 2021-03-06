@@ -54,16 +54,9 @@
                     <option value="{{ book }}">{{ book }}</option>
                   {% endfor %}
               </select><br>
-              <!-- <label for="filter-chapter">Chapter</label>
-              <select class="filter-chapter" id="filter-chapter" name="chapters">
-                  <option value="{{ to_display[2] }}" selected>{{ to_display[2] }}</option>
-                  {% for chapter in chapters %}
-                    <option value="{{ chapter }}">{{ chapter }}</option>
-                  {% endfor %}
-              </select> -->
-              <button type="submit" class="btn btn-default">Search!</button>
+              <button type="submit" class="btn btn-default">Get the Word</button>
             </form>
-            <h2>{{ to_display[1] }}: {{ book_subject }}</h2>
+            <h2>{{ selected_book }}: {{ book_subject }}</h2>
             <h3>Chapter 1</h3>
             {{ text }}
 
