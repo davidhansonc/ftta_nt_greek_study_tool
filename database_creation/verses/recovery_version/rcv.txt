@@ -6792,31 +6792,31 @@ Tt 3:12When I send Artemas to you or Tychicus, be diligent to come to me at Nico
 Tt 3:13Zenas the lawyer and Apollos send forward diligently that nothing may be lacking to them.
 Tt 3:14And let those also who are ours learn to maintain respectable works for their necessary needs, that they may not be unfruitful.
 Tt 3:15All who are with me greet you. Greet those who love us in faith. Grace be with you all.
-Pm 1Paul, a prisoner of Christ Jesus, and Timothy the brother, to Philemon our beloved and fellow worker
-Pm 2And to Apphia the sister and to Archippus our fellow soldier and to the church, which is in your house:
-Pm 3Grace to you and peace from God our Father and the Lord Jesus Christ.
-Pm 4I thank my God always, making mention of you in my prayers,
-Pm 5Hearing of your love and the faith which you have toward the Lord Jesus and to all the saints,
-Pm 6That the fellowship of your faith may become effective in the full knowledge of every good thing which is in you for Christ.
-Pm 7For I had much joy and encouragement over your love, because the inward parts of the saints have been refreshed through you, brother.
-Pm 8Therefore though I have much boldness in Christ to charge you what is fitting,
-Pm 9Because of love I rather entreat, being such a one as Paul the aged and now also a prisoner of Christ Jesus.
-Pm 10I entreat you concerning my child, whom I have begotten in my bonds, Onesimus,
-Pm 11Who formerly was useless to you but now is useful both to you and to me.
-Pm 12Him I have sent back to you — him, that is, my very heart — 
-Pm 13Whom I intended to keep with myself that on your behalf he might minister to me in the bonds of the gospel.
-Pm 14But without your mind I did not want to do anything, that your goodness would not be as of necessity, but voluntary.
-Pm 15For perhaps for this reason he was separated from you for but an hour, that you might fully have him forever,
-Pm 16No longer as a slave, but above a slave, a beloved brother, especially to me, but how much more to you, both in the flesh and in the Lord.
-Pm 17If then you hold me as a partner, receive him as myself.
-Pm 18And if he has wronged you in anything or owes anything, charge that to my account.
-Pm 19I, Paul, have written with my own hand: I will repay; not to say to you that you owe me even your own self besides.
-Pm 20Yes, brother, may I have profit from you in the Lord; refresh my inward parts in Christ.
-Pm 21Having confidence in your obedience, I have written to you, knowing that you will do even beyond the things that I say.
-Pm 22And at the same time also prepare me a lodging, for I hope that through your prayers I will be graciously given to you.
-Pm 23Epaphras, my fellow prisoner in Christ Jesus, greets you;
-Pm 24As do Mark, Aristarchus, Demas, Luke, my fellow workers.
-Pm 25The grace of the Lord Jesus Christ be with your spirit.
+Pm 1:1Paul, a prisoner of Christ Jesus, and Timothy the brother, to Philemon our beloved and fellow worker
+Pm 1:2And to Apphia the sister and to Archippus our fellow soldier and to the church, which is in your house:
+Pm 1:3Grace to you and peace from God our Father and the Lord Jesus Christ.
+Pm 1:4I thank my God always, making mention of you in my prayers,
+Pm 1:5Hearing of your love and the faith which you have toward the Lord Jesus and to all the saints,
+Pm 1:6That the fellowship of your faith may become effective in the full knowledge of every good thing which is in you for Christ.
+Pm 1:7For I had much joy and encouragement over your love, because the inward parts of the saints have been refreshed through you, brother.
+Pm 1:8Therefore though I have much boldness in Christ to charge you what is fitting,
+Pm 1:9Because of love I rather entreat, being such a one as Paul the aged and now also a prisoner of Christ Jesus.
+Pm 1:10I entreat you concerning my child, whom I have begotten in my bonds, Onesimus,
+Pm 1:11Who formerly was useless to you but now is useful both to you and to me.
+Pm 1:12Him I have sent back to you — him, that is, my very heart — 
+Pm 1:13Whom I intended to keep with myself that on your behalf he might minister to me in the bonds of the gospel.
+Pm 1:14But without your mind I did not want to do anything, that your goodness would not be as of necessity, but voluntary.
+Pm 1:15For perhaps for this reason he was separated from you for but an hour, that you might fully have him forever,
+Pm 1:16No longer as a slave, but above a slave, a beloved brother, especially to me, but how much more to you, both in the flesh and in the Lord.
+Pm 1:17If then you hold me as a partner, receive him as myself.
+Pm 1:18And if he has wronged you in anything or owes anything, charge that to my account.
+Pm 1:19I, Paul, have written with my own hand: I will repay; not to say to you that you owe me even your own self besides.
+Pm 1:20Yes, brother, may I have profit from you in the Lord; refresh my inward parts in Christ.
+Pm 1:21Having confidence in your obedience, I have written to you, knowing that you will do even beyond the things that I say.
+Pm 1:22And at the same time also prepare me a lodging, for I hope that through your prayers I will be graciously given to you.
+Pm 1:23Epaphras, my fellow prisoner in Christ Jesus, greets you;
+Pm 1:24As do Mark, Aristarchus, Demas, Luke, my fellow workers.
+Pm 1:25The grace of the Lord Jesus Christ be with your spirit.
 He 1:1God, having spoken of old in many portions and in many ways to the fathers in the prophets,
 He 1:2Has at the last of these days spoken to us in the Son, whom He appointed Heir of all things, through whom also He made the universe;
 He 1:3Who, being the effulgence of His glory and the impress of His substance and upholding and bearing all things by the word of His power, having made purification of sins, sat down on the right hand of the Majesty on high;
@@ -7499,58 +7499,58 @@ Ja 5:20Let him know that he who turns a sinner back from the error of his way wi
 1J 5:19We know that we are of God, and the whole world lies in the evil one.
 1J 5:20And we know that the Son of God has come and has given us an understanding that we might know Him who is true; and we are in Him who is true, in His Son Jesus Christ. This is the true God and eternal life.
 1J 5:21Little children, guard yourselves from idols.
-2J 1The elder to the chosen lady and to her children, whom I love in truthfulness, and not only I but also all those who know the truth,
-2J 2For the sake of the truth which abides in us and will be with us forever:
-2J 3Grace, mercy, peace will be with us from God the Father and from Jesus Christ, the Son of the Father, in truth and love.
-2J 4I rejoiced greatly that I have found some of your children walking in truth, even as we received commandment from the Father.
-2J 5And now I ask you, lady, not as writing a new commandment to you but that which we have had from the beginning, that we love one another.
-2J 6And this is love, that we walk according to His commandments. This is the commandment, even as you heard from the beginning, that you walk in love.
-2J 7For many deceivers went out into the world, those who do not confess Jesus Christ coming in the flesh. This is the deceiver and the antichrist.
-2J 8Look to yourselves that you do not lose the things which we wrought, but that you may receive a full reward.
-2J 9Everyone who goes beyond and does not abide in the teaching of Christ does not have God; he who abides in the teaching, he has both the Father and the Son.
-2J 10If anyone comes to you and does not bring this teaching, do not receive him into your house, and do not say to him, Rejoice!
-2J 11For he who says to him, Rejoice, shares in his evil works.
-2J 12Though I have many things to write to you, I do not want to do so with paper and ink, but I am hoping to be with you and to speak face to face that our joy may be made full.
-2J 13The children of your chosen sister greet you.
-3J 1The elder to Gaius the beloved, whom I love in truthfulness.
-3J 2Beloved, concerning all things I wish that you may prosper and be in health, even as your soul prospers.
-3J 3For I rejoiced greatly at the brothers’ coming and testifying to your steadfastness in the truth, even as you walk in truth.
-3J 4I have no greater joy than these things, that I hear that my children are walking in the truth.
-3J 5Beloved, you do faithfully in whatever you have wrought for the brothers, and this for strangers,
-3J 6Who testified to your love before the church; whom you will do well to send forward in a manner worthy of God;
-3J 7For on behalf of the Name they went out, taking nothing from the Gentiles.
-3J 8We therefore ought to support such ones that we may become fellow workers in the truth.
-3J 9I wrote something to the church; but Diotrephes, who loves to be first among them, does not receive us.
-3J 10For this reason, if I come, I will bring to remembrance his works which he does, babbling against us with evil words; and not being satisfied with these, neither does he himself receive the brothers, and those intending to do so he forbids and casts out of the church.
-3J 11Beloved, do not imitate the evil, but the good. He who does good is of God; he who does evil has not seen God.
-3J 12To Demetrius testimony has been borne by all and by the truth itself; and we also testify, and you know that our testimony is true.
-3J 13I had many things to write to you, but I do not want to write to you with ink and pen;
-3J 14But I hope to see you shortly, and we will speak face to face. Peace to you. The friends greet you. Greet the friends by name.
-Jd 1Jude, a slave of Jesus Christ and a brother of James, to those who are called, beloved in God the Father, and kept by Jesus Christ:
-Jd 2Mercy to you and peace and love be multiplied.
-Jd 3Beloved, while using all diligence to write to you concerning our common salvation, I found it necessary to write to you and exhort you to earnestly contend for the faith once for all delivered to the saints.
-Jd 4For certain men have crept in unnoticed, who of old have been written of beforehand for this judgment, ungodly men, perverting the grace of our God into licentiousness and denying our only Master and Lord, Jesus Christ.
-Jd 5But I intend to remind you, though you know all things once for all, that the Lord, having saved a people out of the land of Egypt, afterward destroyed those who did not believe;
-Jd 6And angels who did not keep their own principality but abandoned their own dwelling place, He has kept in eternal bonds under gloom for the judgment of the great day;
-Jd 7How Sodom and Gomorrah and the cities around them, who in like manner with these gave themselves over to fornication and went after different flesh, are set forth as an example, undergoing the penalty of eternal fire.
-Jd 8Nevertheless in like manner these dreamers also defile the flesh and despise lordship and revile dignities.
-Jd 9But Michael the archangel, when he contended with the devil and disputed concerning the body of Moses, did not dare to bring a reviling judgment against him but said, The Lord rebuke you.
-Jd 10But these revile the things that they do not know; and the things that they understand naturally, like animals without reason, in these they are being corrupted.
-Jd 11Woe to them! For they have gone in the way of Cain and have rushed out in the error of Balaam for reward and have perished in the rebellion of Korah.
-Jd 12These are the hidden reefs in your love feasts, feasting together with you without fear, shepherding themselves; waterless clouds being carried off by winds; autumn trees without fruit, having died twice, rooted up;
-Jd 13Wild waves of the sea, foaming out their own shames; wandering stars, for whom the gloom of darkness is kept for eternity.
-Jd 14And Enoch, the seventh from Adam, prophesied also of these, saying, Behold, the Lord came with myriads of His saints
-Jd 15To execute judgment against all and to convict all the ungodly concerning all their ungodly works which they have done in ungodliness, and concerning all the hard things which ungodly sinners have spoken against Him.
-Jd 16These are murmurers, complainers, going on according to their own lusts; and their mouth speaks great swelling things, flattering persons for the sake of advantage.
-Jd 17But you, beloved, remember the words spoken before by the apostles of our Lord Jesus Christ,
-Jd 18That they said to you, In the last time there will be mockers, going on according to their own lusts for ungodliness.
-Jd 19These are those who make divisions, soulish, having no spirit.
-Jd 20But you, beloved, building up yourselves upon your most holy faith, praying in the Holy Spirit,
-Jd 21Keep yourselves in the love of God, awaiting the mercy of our Lord Jesus Christ unto eternal life.
-Jd 22And on some have mercy, on those who are wavering;
-Jd 23Save them by snatching them out of the fire. On others have mercy in fear, hating even the inner garment spotted from the flesh.
-Jd 24But to Him who is able to guard you from stumbling and to set you before His glory without blemish in exultation,
-Jd 25To the only God our Savior through Jesus Christ our Lord be glory, majesty, might, and authority before all time and now and unto all eternity. Amen.
+2J 1:1The elder to the chosen lady and to her children, whom I love in truthfulness, and not only I but also all those who know the truth,
+2J 1:2For the sake of the truth which abides in us and will be with us forever:
+2J 1:3Grace, mercy, peace will be with us from God the Father and from Jesus Christ, the Son of the Father, in truth and love.
+2J 1:4I rejoiced greatly that I have found some of your children walking in truth, even as we received commandment from the Father.
+2J 1:5And now I ask you, lady, not as writing a new commandment to you but that which we have had from the beginning, that we love one another.
+2J 1:6And this is love, that we walk according to His commandments. This is the commandment, even as you heard from the beginning, that you walk in love.
+2J 1:7For many deceivers went out into the world, those who do not confess Jesus Christ coming in the flesh. This is the deceiver and the antichrist.
+2J 1:8Look to yourselves that you do not lose the things which we wrought, but that you may receive a full reward.
+2J 1:9Everyone who goes beyond and does not abide in the teaching of Christ does not have God; he who abides in the teaching, he has both the Father and the Son.
+2J 1:10If anyone comes to you and does not bring this teaching, do not receive him into your house, and do not say to him, Rejoice!
+2J 1:11For he who says to him, Rejoice, shares in his evil works.
+2J 1:12Though I have many things to write to you, I do not want to do so with paper and ink, but I am hoping to be with you and to speak face to face that our joy may be made full.
+2J 1:13The children of your chosen sister greet you.
+3J 1:1The elder to Gaius the beloved, whom I love in truthfulness.
+3J 1:2Beloved, concerning all things I wish that you may prosper and be in health, even as your soul prospers.
+3J 1:3For I rejoiced greatly at the brothers’ coming and testifying to your steadfastness in the truth, even as you walk in truth.
+3J 1:4I have no greater joy than these things, that I hear that my children are walking in the truth.
+3J 1:5Beloved, you do faithfully in whatever you have wrought for the brothers, and this for strangers,
+3J 1:6Who testified to your love before the church; whom you will do well to send forward in a manner worthy of God;
+3J 1:7For on behalf of the Name they went out, taking nothing from the Gentiles.
+3J 1:8We therefore ought to support such ones that we may become fellow workers in the truth.
+3J 1:9I wrote something to the church; but Diotrephes, who loves to be first among them, does not receive us.
+3J 1:10For this reason, if I come, I will bring to remembrance his works which he does, babbling against us with evil words; and not being satisfied with these, neither does he himself receive the brothers, and those intending to do so he forbids and casts out of the church.
+3J 1:11Beloved, do not imitate the evil, but the good. He who does good is of God; he who does evil has not seen God.
+3J 1:12To Demetrius testimony has been borne by all and by the truth itself; and we also testify, and you know that our testimony is true.
+3J 1:13I had many things to write to you, but I do not want to write to you with ink and pen;
+3J 1:14But I hope to see you shortly, and we will speak face to face. Peace to you. The friends greet you. Greet the friends by name.
+Jd 1:1Jude, a slave of Jesus Christ and a brother of James, to those who are called, beloved in God the Father, and kept by Jesus Christ:
+Jd 1:2Mercy to you and peace and love be multiplied.
+Jd 1:3Beloved, while using all diligence to write to you concerning our common salvation, I found it necessary to write to you and exhort you to earnestly contend for the faith once for all delivered to the saints.
+Jd 1:4For certain men have crept in unnoticed, who of old have been written of beforehand for this judgment, ungodly men, perverting the grace of our God into licentiousness and denying our only Master and Lord, Jesus Christ.
+Jd 1:5But I intend to remind you, though you know all things once for all, that the Lord, having saved a people out of the land of Egypt, afterward destroyed those who did not believe;
+Jd 1:6And angels who did not keep their own principality but abandoned their own dwelling place, He has kept in eternal bonds under gloom for the judgment of the great day;
+Jd 1:7How Sodom and Gomorrah and the cities around them, who in like manner with these gave themselves over to fornication and went after different flesh, are set forth as an example, undergoing the penalty of eternal fire.
+Jd 1:8Nevertheless in like manner these dreamers also defile the flesh and despise lordship and revile dignities.
+Jd 1:9But Michael the archangel, when he contended with the devil and disputed concerning the body of Moses, did not dare to bring a reviling judgment against him but said, The Lord rebuke you.
+Jd 1:10But these revile the things that they do not know; and the things that they understand naturally, like animals without reason, in these they are being corrupted.
+Jd 1:11Woe to them! For they have gone in the way of Cain and have rushed out in the error of Balaam for reward and have perished in the rebellion of Korah.
+Jd 1:12These are the hidden reefs in your love feasts, feasting together with you without fear, shepherding themselves; waterless clouds being carried off by winds; autumn trees without fruit, having died twice, rooted up;
+Jd 1:13Wild waves of the sea, foaming out their own shames; wandering stars, for whom the gloom of darkness is kept for eternity.
+Jd 1:14And Enoch, the seventh from Adam, prophesied also of these, saying, Behold, the Lord came with myriads of His saints
+Jd 1:15To execute judgment against all and to convict all the ungodly concerning all their ungodly works which they have done in ungodliness, and concerning all the hard things which ungodly sinners have spoken against Him.
+Jd 1:16These are murmurers, complainers, going on according to their own lusts; and their mouth speaks great swelling things, flattering persons for the sake of advantage.
+Jd 1:17But you, beloved, remember the words spoken before by the apostles of our Lord Jesus Christ,
+Jd 1:18That they said to you, In the last time there will be mockers, going on according to their own lusts for ungodliness.
+Jd 1:19These are those who make divisions, soulish, having no spirit.
+Jd 1:20But you, beloved, building up yourselves upon your most holy faith, praying in the Holy Spirit,
+Jd 1:21Keep yourselves in the love of God, awaiting the mercy of our Lord Jesus Christ unto eternal life.
+Jd 1:22And on some have mercy, on those who are wavering;
+Jd 1:23Save them by snatching them out of the fire. On others have mercy in fear, hating even the inner garment spotted from the flesh.
+Jd 1:24But to Him who is able to guard you from stumbling and to set you before His glory without blemish in exultation,
+Jd 1:25To the only God our Savior through Jesus Christ our Lord be glory, majesty, might, and authority before all time and now and unto all eternity. Amen.
 Rv 1:1The revelation of Jesus Christ which God gave to Him to show to His slaves the things that must quickly take place; and He made it known by signs, sending it by His angel to His slave John,
 Rv 1:2Who testified the word of God and the testimony of Jesus Christ, even all that he saw.
 Rv 1:3Blessed is he who reads and those who hear the words of the prophecy and keep the things written in it, for the time is near.

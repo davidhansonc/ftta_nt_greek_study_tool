@@ -11,7 +11,6 @@ class NTVerses(db.Model):
     verse = db.Column(db.Integer(), nullable=False)
     recovery_version = db.Column(db.String())
     nestle1904 = db.Column(db.String())
-    amplified = db.Column(db.String())
     __table_args__ = (
             db.PrimaryKeyConstraint(book, chapter, verse),
         )
