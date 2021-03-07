@@ -25,7 +25,6 @@ def parse_for_csv(regex_dict, verse_data):
                 chapter = "1"
             verse = match.group(3)
             verse_text = match.group(4).replace("'", "''")
-            # verse_text = f"'{verse_text} '"
 
     return [book, chapter, verse, verse_text]
 

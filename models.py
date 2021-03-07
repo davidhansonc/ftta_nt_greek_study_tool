@@ -16,7 +16,7 @@ class NTVerses(db.Model):
         )
 
 
-    def __init__(self, name, model, doors):
+    def __init__(self):
         self.book = book
         self.chapter = chapter
         self.verse = verse
@@ -26,13 +26,13 @@ class NTVerses(db.Model):
 class BibleBooks(db.Model):
     __tablename__ = "bible_books"
 
-    id = db.Column('book_id', db.Integer, primary_key = True)
+    id = db.Column("book_id", db.Integer, primary_key=True)
     book = db.Column(db.String(), nullable=False)
     chapters = db.Column(db.Integer(), nullable=False)
     subject = db.Column(db.String())
 
 
-    def __init__(self, name, model, doors):
+    def __init__(self):
         self.book = book
         self.chapter = chapter
         self.subject = subject

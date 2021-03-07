@@ -7,8 +7,8 @@ import pandas as pd
 
 app = Flask(__name__)
 
-database_conn = os.environ['DATABASE_URL']
-# database_conn = "postgresql://davidhansonc:@localhost:5432/na28_rcv" 
+# database_conn = os.environ["DATABASE_URL"]
+database_conn = "postgresql://davidhansonc:@localhost:5432/na28_rcv" 
 
 app.config["SQLALCHEMY_DATABASE_URI"] = database_conn
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
@@ -71,32 +71,33 @@ def insert_table_data():
     # Fill Bible book data if table is empty
     if len(s.query(BibleBooks).all()) == 0:
         print("No book data in the table detected.")
-        print("Initializing BibleBooks table in database.")
+        print("Initializing BibleBooks table in database...")
 
         df = pd.read_csv("./database_creation/verses/nt_book_data.csv", usecols=range(3), lineterminator="\n")
+        print(df)
         df.to_sql(name="bible_books", con=db.engine, if_exists="append", index=False)
-        print("Book data initialized")
+        print("Book data initialized!")
 
     # Input verses if table is empty
     if len(s.query(NTVerses).all()) == 0:
         print("No verse data in the table detected.")
-        print("Initializing NTVerses table in database.")
+        print("Initializing NTVerses table in database...")
         
         gk_cols = ["book", "chapter", "verse", "nestle1904"]
         gk_df = pd.read_csv("./database_creation/verses/nestle1904/nestle1904.csv", delimiter="|", names=gk_cols, header=None, usecols=range(4), lineterminator="\n")
+        gk_df.nestle1904 = gk_df.nestle1904.str.replace('\r', '')
 
         rcv_cols = ["book", "chapter", "verse", "recovery_version"]
         rcv_df = pd.read_csv("./database_creation/verses/recovery_version/rcv.csv", delimiter="|", names=rcv_cols, header=None, usecols=range(4), lineterminator="\n")
+        rcv_df.recovery_version = rcv_df.recovery_version.str.replace('\r', '')
 
         total_df = pd.merge(rcv_df, gk_df, how="outer", on=["book", "chapter", "verse"])
-        print(total_df.head(-5))
         total_df.to_sql(name="new_testament", con=db.engine, if_exists="append", index=False)
-        print("Book data initialized")
+        print("Verse data initialized!")
 
 
 if __name__ == "__main__":
     with app.app_context():
-        # NTVerses.__table__.drop(db.engine)
         db.create_all()
         insert_table_data()
     app.run()
