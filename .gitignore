@@ -1,5 +1,6 @@
 # Virtual Env
 pyenv
+.envrc
 
 # MacOS
 .DS_Store
