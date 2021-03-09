@@ -68,32 +68,39 @@ def query_text(query_version="Nestle 1904", query_book="Matthew", query_chapter=
 def insert_table_data():
     s = db.session()
 
+    # Input verses if table is empty
+    if len(s.query(NTVerses).all()) == 0:
+        print("No verse data in the table detected.")
+        print("Initializing NTVerses table in database...")
+        
+        # Greek data
+        gk_cols = ["book", "chapter", "verse", "nestle1904"]
+        gk_df = pd.read_csv("./database_creation/verses/nestle1904/nestle1904.csv", delimiter="|", names=gk_cols, header=None, usecols=range(4), lineterminator="\n")
+        gk_df.nestle1904 = gk_df.nestle1904.str.replace('\r', '')
+        print(f"Greek table length: {len(gk_df)}")
+
+        # recovery version data
+        rcv_cols = ["book", "chapter", "verse", "recovery_version"]
+        rcv_df = pd.read_csv("./database_creation/verses/recovery_version/rcv.csv", delimiter="|", names=rcv_cols, header=None, usecols=range(4), lineterminator="\n")
+        rcv_df.recovery_version = rcv_df.recovery_version.str.replace('\r', '')
+        print(f"RcV table length: {len(rcv_df)}")
+
+        # fill table with combined data
+        total_df = pd.merge(rcv_df, gk_df, how="outer", on=["book", "chapter", "verse"]).fillna("-")
+        print(f"Total length: {len(total_df)}")
+
+        total_df.to_sql(name="new_testament", con=db.engine, if_exists="append", index=False)
+        print("Verse data initialized!")
+
     # Fill Bible book data if table is empty
     if len(s.query(BibleBooks).all()) == 0:
         print("No book data in the table detected.")
         print("Initializing BibleBooks table in database...")
 
         df = pd.read_csv("./database_creation/verses/nt_book_data.csv", usecols=range(3), lineterminator="\n")
-        print(df)
+
         df.to_sql(name="bible_books", con=db.engine, if_exists="append", index=False)
         print("Book data initialized!")
-
-    # Input verses if table is empty
-    if len(s.query(NTVerses).all()) == 0:
-        print("No verse data in the table detected.")
-        print("Initializing NTVerses table in database...")
-        
-        gk_cols = ["book", "chapter", "verse", "nestle1904"]
-        gk_df = pd.read_csv("./database_creation/verses/nestle1904/nestle1904.csv", delimiter="|", names=gk_cols, header=None, usecols=range(4), lineterminator="\n")
-        gk_df.nestle1904 = gk_df.nestle1904.str.replace('\r', '')
-
-        rcv_cols = ["book", "chapter", "verse", "recovery_version"]
-        rcv_df = pd.read_csv("./database_creation/verses/recovery_version/rcv.csv", delimiter="|", names=rcv_cols, header=None, usecols=range(4), lineterminator="\n")
-        rcv_df.recovery_version = rcv_df.recovery_version.str.replace('\r', '')
-
-        total_df = pd.merge(rcv_df, gk_df, how="outer", on=["book", "chapter", "verse"])
-        total_df.to_sql(name="new_testament", con=db.engine, if_exists="append", index=False)
-        print("Verse data initialized!")
 
 
 if __name__ == "__main__":

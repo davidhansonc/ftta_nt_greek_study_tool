@@ -30,9 +30,9 @@ def parse_for_csv(regex_dict, verse_data):
 
 
 if __name__ == "__main__":
-    file_path = "./recovery_version/rcv.txt"
-    new_path = "./recovery_version/rcv.csv"
-    # file_path = "./nestle1904/nestle1904.txt"
-    # new_path = "./nestle1904/nestle1904.csv"
+    # file_path = "./recovery_version/rcv.txt"
+    # new_path = "./recovery_version/rcv.csv"
+    file_path = "./nestle1904/nestle1904.txt"
+    new_path = "./nestle1904/nestle1904.csv"
 
     txt_to_csv(file_path, new_path)
