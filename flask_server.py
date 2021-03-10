@@ -68,6 +68,16 @@ def query_text(query_version="Nestle 1904", query_book="Matthew", query_chapter=
 def insert_table_data():
     s = db.session()
 
+    # Fill Bible book data if table is empty
+    if len(s.query(BibleBooks).all()) == 0:
+        print("No book data in the table detected.")
+        print("Initializing BibleBooks table in database...")
+
+        df = pd.read_csv("./database_creation/verses/nt_book_data.csv", usecols=range(3), lineterminator="\n")
+
+        df.to_sql(name="bible_books", con=db.engine, if_exists="append", index=False)
+        print("Book data initialized!")
+
     # Input verses if table is empty
     if len(s.query(NTVerses).all()) == 0:
         print("No verse data in the table detected.")
@@ -91,16 +101,6 @@ def insert_table_data():
 
         total_df.to_sql(name="new_testament", con=db.engine, if_exists="append", index=False)
         print("Verse data initialized!")
-
-    # Fill Bible book data if table is empty
-    if len(s.query(BibleBooks).all()) == 0:
-        print("No book data in the table detected.")
-        print("Initializing BibleBooks table in database...")
-
-        df = pd.read_csv("./database_creation/verses/nt_book_data.csv", usecols=range(3), lineterminator="\n")
-
-        df.to_sql(name="bible_books", con=db.engine, if_exists="append", index=False)
-        print("Book data initialized!")
 
 
 if __name__ == "__main__":
