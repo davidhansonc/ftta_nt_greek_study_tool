@@ -6,8 +6,8 @@ from models import db, NTVerses, BibleBooks
 
 app = Flask(__name__)
 
-# database_conn = os.environ["DATABASE_URL"]
-database_conn = "postgresql://davidhansonc:@localhost:5432/na28_rcv" 
+database_conn = os.environ["DATABASE_URL"]
+# database_conn = "postgresql://davidhansonc:@localhost:5432/na28_rcv" 
 
 app.config["SQLALCHEMY_DATABASE_URI"] = database_conn
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
