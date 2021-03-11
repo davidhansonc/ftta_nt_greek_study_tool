@@ -6,8 +6,8 @@ from models import db, NTVerses, BibleBooks
 
 app = Flask(__name__)
 
-database_conn = os.environ["DATABASE_URL"]
-# database_conn = "postgresql://davidhansonc:@localhost:5432/na28_rcv" 
+# database_conn = os.environ["DATABASE_URL"]
+database_conn = "postgresql://davidhansonc:@localhost:5432/na28_rcv" 
 
 app.config["SQLALCHEMY_DATABASE_URI"] = database_conn
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
@@ -58,7 +58,7 @@ def query_text(query_version="Nestle 1904", query_book="Matthew", query_chapter=
         verses = NTVerses.query.filter(NTVerses.book==query_book, NTVerses.chapter==query_chapter).with_entities(NTVerses.nestle1904).all()
     else:
         verses = NTVerses.query.filter(NTVerses.book==query_book, NTVerses.chapter==query_chapter).with_entities(NTVerses.recovery_version).all()
-    verses = [verse[0] for verse in verses]
+    verses = [verse[0] + ' ' for verse in verses]
 
     verses_as_string = ''.join(verses)
     return verses_as_string
